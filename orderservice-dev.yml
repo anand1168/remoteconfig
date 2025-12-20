@@ -1,7 +1,5 @@
 spring:
-  application:
-    name: order-service
-  datasource:
+   datasource:
     url: jdbc:postgresql://localhost:5432/order
     username: embarkx
     password: embarkx
