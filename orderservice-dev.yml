@@ -1,5 +1,9 @@
 spring:
-   datasource:
+  application:
+    name: order-service
+  profiles:
+    active: dev
+  datasource:
     url: jdbc:postgresql://localhost:5432/order
     username: embarkx
     password: embarkx
@@ -8,8 +12,26 @@ spring:
       show-sql: true
       hibernate:
         ddl-auto: update
- server:
+  
+
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    url: jdbc:h2:mem:test
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+
+server:
   port: 8083
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
 
        
   
