@@ -1,8 +1,7 @@
 spring:
   application:
     name: order-service
-  profiles:
-    active: dev
+  
   datasource:
     url: jdbc:postgresql://localhost:5432/order
     username: embarkx
