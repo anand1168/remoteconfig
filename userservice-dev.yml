@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       database: userdb
-      uri: mongodb://localhost:27017/userdb
+      uri: ${MONGO_URL}
 eureka:
   client:
     register-with-eureka: true
