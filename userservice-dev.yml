@@ -3,9 +3,19 @@ spring:
     mongodb:
       database: userdb
       uri: ${MONGO_URL}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest   
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
