@@ -4,8 +4,8 @@ spring:
   
   datasource:
     url: jdbc:postgresql://localhost:5432/product
-    username: embarkx
-    password: embarkx
+    username: ${DB_USER}
+    password: ${DB_PASS}
   jpa:
       database: POSTGRESQL
       show-sql: true
