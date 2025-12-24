@@ -19,3 +19,13 @@ management:
     web:
       exposure:
         include: "*"
+logging:
+  level:
+    root: INFO
+    com.ecommerce.user: TRACE
+  logback:
+    rollingpolicy:
+      clean-history-on-start: true
+      max-file-size: 1MB
+  file:
+    name: logs/${spring.application.name}.log
