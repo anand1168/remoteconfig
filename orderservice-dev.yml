@@ -16,6 +16,17 @@ spring:
     port: 5672
     username: guest
     password: guest
+  cloud:
+    stream:
+      bindings:
+        createOrder-out-0:
+          destination: order.exchange
+          content-type: application/json
+      rabbit:
+        bindings:
+          createOrder-out-0:
+            producer:
+              routing-key: order.tracking
 
 eureka:
   client:
